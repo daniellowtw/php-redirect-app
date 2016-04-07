@@ -40,8 +40,5 @@ if (empty($_POST)) {
         echo "Done!";
     } catch (PDOException $e) {
         print 'Exception : ' . $e->getMessage();
-    } finally {
-        Database::disconnect();
     }
-
 }

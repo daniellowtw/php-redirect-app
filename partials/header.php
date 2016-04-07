@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="/<?php echo Conf::getBase() ."/bulma.min.css"?>" />
+        <link rel="stylesheet" href="<?php echo Conf::getBase() ."/bulma.min.css"?>" />
         <style type="text/css">
             body {
                 margin: 0 auto;
