@@ -41,7 +41,7 @@ if (empty($_POST)) {
         $q = $pdo->prepare("Insert into redirect (short, url) values(?,?)");
         $ret = $q->execute(array($short, $Url));
         Database::disconnect();
-        $shortUrl = (Conf::$httpsEnabled ? 'https://' : 'http://') . $_SERVER['SERVER_NAME'] . '/' . Conf::getBase() .'/' . $short;
+        $shortUrl = (Conf::$httpsEnabled ? 'https://' : 'http://') . $_SERVER['SERVER_NAME'] . Conf::getBase() .'/' . $short;
         echo "Done! </br> <a href='$shortUrl'>$shortUrl</a>";
         // close the database connection
     } catch (PDOException $e) {
