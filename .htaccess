@@ -1,0 +1,20 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /boiler
+
+# Do not rewrite for files or directory
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# redirect add to add page
+RewriteRule ^add/?$ add.php [L]
+
+# redirect add to add page
+RewriteRule ^delete/?$ delete.php [L]
+
+# redirect add to list all redirects
+RewriteRule ^list/?$ list.php [L]
+
+# everything else redirect to router
+RewriteRule ^ index.php [L]
