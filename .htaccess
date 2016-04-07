@@ -1,6 +1,6 @@
 Options +FollowSymLinks
 RewriteEngine on
-RewriteBase /boiler
+RewriteBase /r
 
 # Do not rewrite for files or directory
 RewriteCond %{REQUEST_FILENAME} -f [OR]
